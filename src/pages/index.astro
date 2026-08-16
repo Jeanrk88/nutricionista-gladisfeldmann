@@ -198,47 +198,6 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="section about-section" id="sobre">
-      <div class="container about-grid">
-        <div class="about-media">
-          <div class="image-frame about-frame">
-            <img
-              src={asset(site.assets.about)}
-              alt="Nutricionista Gladis Feldmann em ambiente profissional com luz natural"
-              width="1122"
-              height="1402"
-              loading="lazy"
-            />
-          </div>
-          <div class="signature-card" aria-hidden="true">
-            <span>GF</span><small>cuidado em cada escolha</small>
-          </div>
-        </div>
-        <div class="about-copy">
-          <p class="eyebrow">{site.about.eyebrow}</p><h2>{site.about.title}</h2>
-          {site.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-          <p class="about-credentials">{site.credentials}</p>
-          <div class="about-values">
-            <div>
-              <strong>Consciência</strong><span
-                >para entender suas escolhas</span
-              >
-            </div><div>
-              <strong>Autonomia</strong><span>para cuidar de si com leveza</span
-              >
-            </div>
-          </div>
-          <a
-            class="text-link text-link-dark"
-            href={whatsappUrl}
-            target="_blank"
-            rel="noreferrer"
-            >Conversar com a nutricionista <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </div>
-    </section>
-
     <section class="section services-section" id="atendimentos">
       <div class="container">
         <div class="section-heading">
@@ -359,6 +318,47 @@ const jsonLd = {
               </figure>
             ))
           }
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-media">
+          <div class="image-frame about-frame">
+            <img
+              src={asset(site.assets.about)}
+              alt="Nutricionista Gladis Feldmann em ambiente profissional com luz natural"
+              width="1122"
+              height="1402"
+              loading="lazy"
+            />
+          </div>
+          <div class="signature-card" aria-hidden="true">
+            <span>GF</span><small>cuidado em cada escolha</small>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">{site.about.eyebrow}</p><h2>{site.about.title}</h2>
+          {site.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          <p class="about-credentials">{site.credentials}</p>
+          <div class="about-values">
+            <div>
+              <strong>Consciência</strong><span
+                >para entender suas escolhas</span
+              >
+            </div><div>
+              <strong>Autonomia</strong><span>para cuidar de si com leveza</span
+              >
+            </div>
+          </div>
+          <a
+            class="text-link text-link-dark"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            >Conversar com a nutricionista <span aria-hidden="true">↗</span></a
+          >
         </div>
       </div>
     </section>
