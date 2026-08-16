@@ -15,25 +15,67 @@ const asset = (path: string) =>
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: `${site.role} ${site.name}`,
-  jobTitle: site.role,
-  url: site.seo.url,
-  image: `${site.seo.url}/images/hero-gladis2.webp`,
-  telephone: `+${site.phoneLink}`,
-  sameAs: [site.googleProfile],
-  areaServed: ["Ivoti", "Estância Velha", "Atendimento online"],
-  workLocation: locations.slice(0, 2).map((location) => ({
-    "@type": "Place",
-    name: `Consultório em ${location.city}`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: location.address.replace(" · sala 209", ", sala 209"),
-      addressLocality: location.city,
-      addressRegion: site.state,
-      addressCountry: "BR",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${site.seo.url}/#person`,
+      name: `${site.role} ${site.name}`,
+      jobTitle: site.role,
+      url: site.seo.url,
+      image: `${site.seo.url}/images/hero-gladis2.webp`,
+      telephone: `+${site.phoneLink}`,
+      sameAs: [site.googleProfile],
+      areaServed: ["Ivoti", "Estância Velha", "Atendimento online"],
+      workLocation: locations.slice(0, 2).map((location) => ({
+        "@type": "Place",
+        name: `Consultório em ${location.city}`,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: location.address.replace(" · sala 209", ", sala 209"),
+          addressLocality: location.city,
+          addressRegion: site.state,
+          addressCountry: "BR",
+        },
+      })),
     },
-  })),
+    {
+      "@type": "MedicalBusiness",
+      "@id": `${site.seo.url}/#medicalbusiness`,
+      name: `${site.role} ${site.name}`,
+      image: `${site.seo.url}/images/hero-gladis2.webp`,
+      telephone: `+${site.phoneLink}`,
+      priceRange: "$$",
+      medicalSpecialty: "Nutrition",
+      areaServed: ["Ivoti", "Estância Velha", "Vale do Sinos"],
+      location: locations.slice(0, 2).map((location) => ({
+        "@type": "Place",
+        name: `Consultório em ${location.city}`,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: location.address.replace(" · sala 209", ", sala 209"),
+          addressLocality: location.city,
+          addressRegion: site.state,
+          addressCountry: "BR",
+        },
+      })),
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${site.seo.url}/#faq`,
+      mainEntity: faqs.map(([question, answer]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      })),
+    },
+    ...testimonials.map((testimonial) => ({
+      "@type": "Review",
+      itemReviewed: { "@id": `${site.seo.url}/#medicalbusiness` },
+      author: { "@type": "Person", name: testimonial.name },
+      datePublished: testimonial.dateTime,
+      reviewBody: testimonial.text,
+    })),
+  ],
 };
 ---
 
@@ -114,8 +156,7 @@ const jsonLd = {
           <source media="(max-width: 760px)" srcset={asset(site.assets.heroMobile)} />
           <img
             src={asset(site.assets.hero)}
-            alt=""
-            aria-hidden="true"
+            alt="Nutricionista Gladis Feldmann em consultório, atendimento em Ivoti e Estância Velha"
             width="1717"
             height="916"
             fetchpriority="high"
@@ -131,6 +172,7 @@ const jsonLd = {
       <div class="container hero-copy">
         <p class="eyebrow">{site.hero.eyebrow}</p>
         <h1>{site.hero.title}</h1>
+        <p class="hero-tagline">{site.hero.tagline}</p>
         <p class="lead">{site.hero.description}</p>
         <div class="hero-actions">
           <a class="button" href={whatsappUrl} target="_blank" rel="noreferrer"
@@ -175,6 +217,7 @@ const jsonLd = {
         <div class="about-copy">
           <p class="eyebrow">{site.about.eyebrow}</p><h2>{site.about.title}</h2>
           {site.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          <p class="about-credentials">{site.credentials}</p>
           <div class="about-values">
             <div>
               <strong>Consciência</strong><span
@@ -218,6 +261,7 @@ const jsonLd = {
                     <>
                       <h3>{specialty.title}</h3>
                       <p>{specialty.text}</p>
+                      {specialty.details.map((detail) => <p>{detail}</p>)}
                     </>
                   </div>
                   <a
@@ -396,6 +440,11 @@ const jsonLd = {
         </div><div class="contact-details">
           <p><span>Modalidades</span><strong>Presencial e online</strong></p><p>
             <span>WhatsApp</span><strong>{site.phoneDisplay}</strong>
+          </p><p>
+            <span>Telefone</span
+            ><strong><a class="contact-tel" href={site.telLink}
+              >{site.phoneDisplay}</a
+            ></strong>
           </p><a
             class="button button-light"
             href={whatsappUrl}
@@ -458,12 +507,16 @@ const jsonLd = {
       /><p>
         Atendimento nutricional presencial em Ivoti e Estância Velha, RS, e
         consultas online.
-      </p><div><a href="#inicio">Voltar ao início ↑</a></div>
+      </p><div class="footer-links">
+        <a href={site.telLink}>Ligar: {site.phoneDisplay}</a
+        ><a href="#inicio">Voltar ao início ↑</a>
+      </div>
     </div>
     <div class="container footer-bottom">
-      <span>© {new Date().getFullYear()} {site.name}</span><span
-        >Desenvolvido por Studio Tchê</span
-      >
+      <span
+        >© {new Date().getFullYear()} {site.name} · {site.role} · CRN
+        {site.crn}</span
+      ><span>Desenvolvido por Studio Tchê</span>
     </div>
   </footer>
   <a

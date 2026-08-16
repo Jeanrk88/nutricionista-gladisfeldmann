@@ -4,8 +4,11 @@ export const site = {
   city: "Ivoti",
   state: "RS",
   region: "Ivoti, Estância Velha e atendimento online",
+  crn: "19088D",
+  credentials: "Nutricionista · CRN 19088D",
   phoneDisplay: "(51) 99815-8026", // Confirmar com a profissional antes da publicação definitiva.
   phoneLink: "5551998158026",
+  telLink: "tel:+5551998158026", // Confirmar com a profissional antes da publicação definitiva.
   googleProfile: "https://www.google.com/maps/place/Nutricionista+Gladis+Feldmann/@-29.5959033,-51.1669028,17z/data=!3m1!4b1!4m6!3m5!1s0x951945b100e089a7:0x9377bba161bdae32!8m2!3d-29.5959081!4d-51.1620319!16s%2Fg%2F11rzg3z69l",
   mapsEmbedUrl: "https://maps.google.com/maps?q=Nutricionista%20Gladis%20Feldmann&t=&z=15&ie=UTF8&iwloc=&output=embed",
   mapsUrl: "https://www.google.com/maps/place/Nutricionista+Gladis+Feldmann/@-29.5959081,-51.1620319,17z",
@@ -16,8 +19,9 @@ export const site = {
     ogImage: "/images/hero-gladis2.webp",
   },
   hero: {
-    eyebrow: "Nutricionista em Ivoti e Estância Velha · Online",
-    title: "Sua transformação começa com escolhas que cabem na sua vida.",
+    eyebrow: "Atendimento presencial e online",
+    title: "Nutricionista em Ivoti e Estância Velha — Gladis Feldmann",
+    tagline: "Sua transformação começa com escolhas que cabem na sua vida.",
     description: "Mais saúde, qualidade de vida e autoestima por meio de uma alimentação simples, consciente e possível — sem dietas impossíveis.",
   },
   about: {
@@ -38,13 +42,76 @@ export const site = {
 } as const;
 
 export const specialties = [
-  { number: "01", title: "Emagrecimento saudável", text: "Uma abordagem individualizada para conciliar preferências, rotina e objetivos, construindo mudanças graduais sem dietas restritivas." },
-  { number: "02", title: "Doenças crônicas", text: "Acompanhamento nutricional para diabetes, hipertensão, alterações de colesterol, triglicerídeos e tireoide, integrado ao cuidado médico." },
-  { number: "03", title: "Autoimunes e intolerâncias", text: "Adequações alimentares personalizadas para apoiar o manejo de sintomas e as necessidades nutricionais, sempre respeitando o diagnóstico e o tratamento." },
-  { number: "04", title: "Pré e pós-bariátrica", text: "Cuidado nutricional antes e depois da cirurgia para apoiar a adaptação alimentar, a ingestão de nutrientes e a manutenção dos resultados com segurança." },
-  { number: "05", title: "Nutrição para gestantes", text: "Orientação nutricional em cada trimestre, alinhada ao acompanhamento pré-natal e às necessidades da mãe e do bebê." },
-  { number: "06", title: "Saúde intestinal", text: "Planejamento alimentar para síndrome do intestino irritável, doença de Crohn, retocolite e constipação, como parte do cuidado multiprofissional." },
-  { number: "07", title: "Comportamento alimentar", text: "Suporte nutricional para compulsão e transtornos alimentares, com escuta sem julgamentos e atuação em conjunto com outros profissionais quando necessário." },
+  {
+    number: "01",
+    title: "Emagrecimento saudável",
+    text: "Uma abordagem individualizada para conciliar preferências, rotina e objetivos, construindo mudanças graduais sem dietas restritivas.",
+    details: [
+      "O foco não é só a balança: é construir hábitos que você consegue manter — escolhas que cabem na sua rotina, no seu orçamento e no seu paladar.",
+      "Quem procura: pessoas que já tentaram dietas restritivas, que emagrecem e recuperam o peso, e que buscam um processo sem sofrimento e sem culpa.",
+      "Como funciona: o acompanhamento começa por uma avaliação completa — histórico, rotina e objetivos — e evolui em etapas graduais, com metas realistas e reavaliações periódicas.",
+    ],
+  },
+  {
+    number: "02",
+    title: "Doenças crônicas",
+    text: "Acompanhamento nutricional para diabetes, hipertensão, alterações de colesterol, triglicerídeos e tireoide, integrado ao cuidado médico.",
+    details: [
+      "Diabetes, hipertensão, colesterol, triglicerídeos e tireoide pedem uma alimentação que dialoga com o tratamento médico — sem abrir mão do prazer de comer.",
+      "Quem procura: pessoas com diagnóstico ou exames alterados que precisam organizar a alimentação de forma segura e integrada ao acompanhamento médico.",
+      "Como funciona: o plano alimentar é construído com base nos exames e nas orientações do seu médico, com ajustes feitos em conjunto ao longo do tempo.",
+    ],
+  },
+  {
+    number: "03",
+    title: "Autoimunes e intolerâncias",
+    text: "Adequações alimentares personalizadas para apoiar o manejo de sintomas e as necessidades nutricionais, sempre respeitando o diagnóstico e o tratamento.",
+    details: [
+      "Condições como Hashimoto, doenças inflamatórias e intolerâncias alimentares pedem adequações personalizadas — nunca generalizações.",
+      "Quem procura: pessoas com diagnóstico confirmado ou suspeita, que querem entender o papel da alimentação no manejo dos sintomas.",
+      "Como funciona: respeitando o diagnóstico e o tratamento conduzidos pelo seu médico, o trabalho identifica alimentos e padrões que podem apoiar seu bem-estar.",
+    ],
+  },
+  {
+    number: "04",
+    title: "Pré e pós-bariátrica",
+    text: "Cuidado nutricional antes e depois da cirurgia para apoiar a adaptação alimentar, a ingestão de nutrientes e a manutenção dos resultados com segurança.",
+    details: [
+      "O preparo nutricional antes da cirurgia e o acompanhamento depois são decisivos para a adaptação alimentar e a manutenção dos resultados.",
+      "Quem procura: pessoas em preparo para cirurgia bariátrica ou já operadas, em qualquer fase do processo.",
+      "Como funciona: um plano faseado — preparo pré-operatório, reeducação pós-cirúrgica e manutenção — sempre em conjunto com a equipe médica.",
+    ],
+  },
+  {
+    number: "05",
+    title: "Nutrição para gestantes",
+    text: "Orientação nutricional em cada trimestre, alinhada ao acompanhamento pré-natal e às necessidades da mãe e do bebê.",
+    details: [
+      "Cada trimestre traz necessidades diferentes para a mãe e para o bebê, e a alimentação acompanha essa evolução.",
+      "Quem procura: gestantes que querem orientação nutricional segura, alinhada ao pré-natal.",
+      "Como funciona: orientações específicas por trimestre, incluindo ganho de peso adequado, nutrientes essenciais e manejo de desconfortos comuns.",
+    ],
+  },
+  {
+    number: "06",
+    title: "Saúde intestinal",
+    text: "Planejamento alimentar para síndrome do intestino irritável, doença de Crohn, retocolite e constipação, como parte do cuidado multiprofissional.",
+    details: [
+      "Síndrome do intestino irritável, Crohn, retocolite e constipação têm forte relação com a alimentação — e cada caso pede uma abordagem individual.",
+      "Quem procura: pessoas com diagnóstico ou sintomas intestinais que afetam a rotina e buscam alívio com acompanhamento especializado.",
+      "Como funciona: o trabalho identifica gatilhos alimentares e constrói um plano gradual, como parte do cuidado multiprofissional.",
+    ],
+  },
+  {
+    number: "07",
+    title: "Comportamento alimentar",
+    text: "Suporte nutricional para compulsão e transtornos alimentares, com escuta sem julgamentos e atuação em conjunto com outros profissionais quando necessário.",
+    details: [
+      "Compulsão e uma relação difícil com a comida raramente se resolvem com dieta — exigem escuta, acolhimento e estratégias comportamentais.",
+      "Quem procura: pessoas que sentem perda de controle diante da comida, comem escondido ou vivem entre dieta e culpa.",
+      "Como funciona: um espaço sem julgamentos, com estratégias práticas e atuação em conjunto com psicólogos e outros profissionais quando necessário.",
+    ],
+  },
 ] as const;
 
 export const pillars = [
@@ -74,6 +141,16 @@ export const faqs = [
   ["É possível consultar online?", "Sim. O atendimento online permite realizar a consulta com privacidade e conforto, de onde você estiver."],
   ["Como faço para agendar?", `Clique em qualquer botão de agendamento para conversar diretamente pelo WhatsApp ${site.phoneDisplay}.`],
   ["O acompanhamento é personalizado?", "Sim. A proposta considera sua rotina, preferências, objetivos, histórico e contexto, evitando orientações genéricas."],
+  // Confirmar com a profissional antes da publicação definitiva.
+  ["Atende convênio?", "A consulta é particular, com emissão de nota fiscal. Você pode encaminhar a nota ao seu convênio para solicitar reembolso, conforme as regras do seu plano."],
+  // Confirmar com a profissional antes da publicação definitiva.
+  ["Quanto custa a primeira consulta?", "O valor da consulta é informado diretamente pelo WhatsApp. O acompanhamento e sua duração são combinados de acordo com os seus objetivos."],
+  // Confirmar com a profissional antes da publicação definitiva.
+  ["Como funciona a consulta online?", "A consulta online acontece por videochamada, com a mesma atenção e privacidade do atendimento presencial. Você recebe as orientações e o plano alimentar por WhatsApp ou e-mail."],
+  // Confirmar com a profissional antes da publicação definitiva.
+  ["Preciso levar exames na primeira consulta?", "Não é obrigatório. Se você tiver exames recentes, traga-os — eles ajudam a avaliar seu quadro. Se não tiver, o atendimento acontece normalmente."],
+  // Confirmar com a profissional antes da publicação definitiva.
+  ["Como funciona o primeiro atendimento?", "O primeiro atendimento é uma conversa completa: história de saúde, rotina, preferências e objetivos. A partir dela, é construído um plano realista, em etapas."],
 ] as const;
 
 export const whatsappUrl = `https://wa.me/${site.phoneLink}?text=${encodeURIComponent("Olá, Nutri Gladis! Quero mais informações sobre as consultas.")}`;

@@ -296,6 +296,15 @@ summary:focus-visible {
   color: rgba(255, 255, 255, .88);
 }
 
+.hero-tagline {
+  margin: 20px 0 0;
+  color: #d7bd9f;
+  font-family: var(--serif);
+  font-size: clamp(1.3rem, 1.9vw, 1.55rem);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
 .lead {
   max-width: 520px;
   margin: 26px 0 32px;
@@ -502,6 +511,18 @@ summary:focus-visible {
 
 .about-copy h2 {
   margin-bottom: 30px;
+}
+
+.about-credentials {
+  margin: 26px 0 0;
+  padding: 14px 0;
+  border-block: 1px solid var(--line);
+  color: var(--ink) !important;
+  font-family: var(--display);
+  font-size: .78rem !important;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
 
 .about-values {
@@ -924,6 +945,17 @@ summary:focus-visible {
   font-weight: 500;
 }
 
+.contact-details .contact-tel {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, .4);
+  text-underline-offset: 4px;
+}
+
+.contact-details .contact-tel:hover {
+  color: #e8a487;
+}
+
 .contact-details .button {
   margin-top: 8px;
 }
@@ -1029,6 +1061,21 @@ summary:focus-visible {
 .footer-main div {
   text-align: right;
   font-size: .85rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, .65);
+  transition: color .2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--white);
 }
 
 .footer-bottom {
