@@ -444,7 +444,21 @@ summary:focus-visible {
 }
 
 .about-section {
-  background: var(--paper);
+  background: var(--sage-dark);
+  color: var(--white);
+}
+
+.about-section .eyebrow {
+  color: #d7bd9f;
+}
+
+.about-section .text-link {
+  color: var(--white);
+  border-bottom-color: rgba(255, 255, 255, .5);
+}
+
+.about-section .text-link span {
+  color: #e8a487;
 }
 
 .about-grid {
@@ -464,7 +478,7 @@ summary:focus-visible {
   position: absolute;
   inset: 30px auto -26px 0;
   width: 74%;
-  border: 1px solid rgba(91, 107, 66, .32);
+  border: 1px solid rgba(255, 255, 255, .22);
 }
 
 .about-frame {
@@ -505,7 +519,7 @@ summary:focus-visible {
 
 .about-copy>p:not(.eyebrow) {
   max-width: 650px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, .78);
   font-size: 1.05rem;
 }
 
@@ -516,8 +530,8 @@ summary:focus-visible {
 .about-credentials {
   margin: 26px 0 0;
   padding: 14px 0;
-  border-block: 1px solid var(--line);
-  color: var(--ink) !important;
+  border-block: 1px solid rgba(255, 255, 255, .18);
+  color: rgba(255, 255, 255, .85) !important;
   font-family: var(--display);
   font-size: .78rem !important;
   font-weight: 700;
@@ -531,7 +545,7 @@ summary:focus-visible {
   gap: 20px;
   margin: 34px 0 20px;
   padding: 24px 0;
-  border-block: 1px solid var(--line);
+  border-block: 1px solid rgba(255, 255, 255, .18);
 }
 
 .about-values div {
@@ -546,13 +560,17 @@ summary:focus-visible {
 }
 
 .about-values span {
-  color: var(--muted);
+  color: rgba(255, 255, 255, .65);
   font-size: .82rem;
 }
 
 .services-section {
-  background: var(--sage-dark);
-  color: var(--white);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.services-section .eyebrow-light {
+  color: var(--sage);
 }
 
 .eyebrow-light {
@@ -570,13 +588,13 @@ summary:focus-visible {
 .section-heading>p {
   max-width: 440px;
   margin: 0 0 6px;
-  color: rgba(255, 255, 255, .7);
+  color: var(--muted);
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid rgba(255, 255, 255, .18);
+  border-top: 1px solid var(--line);
 }
 
 .service-card {
@@ -585,8 +603,8 @@ summary:focus-visible {
   flex-direction: column;
   justify-content: space-between;
   padding: 34px 35px 30px;
-  border-right: 1px solid rgba(255, 255, 255, .18);
-  border-bottom: 1px solid rgba(255, 255, 255, .18);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   transition: background .25s ease;
 }
 
@@ -606,11 +624,11 @@ summary:focus-visible {
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, .055);
+  background: rgba(38, 49, 43, .035);
 }
 
 .service-number {
-  color: #d7bd9f;
+  color: var(--terracotta);
   font-family: var(--serif);
   font-size: 1.35rem;
 }
@@ -624,13 +642,13 @@ summary:focus-visible {
 }
 
 .service-card p {
-  color: rgba(255, 255, 255, .7);
+  color: var(--muted);
 }
 
 .service-card a {
   width: fit-content;
   padding-bottom: 5px;
-  border-bottom: 1px solid rgba(255, 255, 255, .4);
+  border-bottom: 1px solid var(--line);
   font-size: .87rem;
   font-weight: 600;
 }
@@ -1395,7 +1413,7 @@ body.menu-open {
   .service-card {
     min-height: 315px;
     border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .18);
+    border-bottom: 1px solid var(--line);
   }
 
   .service-card:last-child {
