@@ -10,6 +10,9 @@ import {
   whatsappUrl,
 } from "../data/site";
 
+const asset = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -47,7 +50,7 @@ const jsonLd = {
     <div class="container header-inner">
       <a class="brand" href="#inicio" aria-label={`${site.name}, início`}
         ><img
-          src={site.assets.logo}
+          src={asset(site.assets.logo)}
           alt={`${site.role} ${site.name}`}
           width="205"
           height="65"
@@ -108,9 +111,9 @@ const jsonLd = {
     <section class="hero" id="inicio">
       <div class="hero-visual">
         <picture class="hero-bg">
-          <source media="(max-width: 760px)" srcset={site.assets.heroMobile} />
+          <source media="(max-width: 760px)" srcset={asset(site.assets.heroMobile)} />
           <img
-            src={site.assets.hero}
+            src={asset(site.assets.hero)}
             alt=""
             aria-hidden="true"
             width="1717"
@@ -158,7 +161,7 @@ const jsonLd = {
         <div class="about-media">
           <div class="image-frame about-frame">
             <img
-              src={site.assets.about}
+              src={asset(site.assets.about)}
               alt="Nutricionista Gladis Feldmann em ambiente profissional com luz natural"
               width="1122"
               height="1402"
@@ -448,7 +451,7 @@ const jsonLd = {
   <footer class="site-footer">
     <div class="container footer-main">
       <img
-        src={site.assets.logo}
+        src={asset(site.assets.logo)}
         alt={`${site.role} ${site.name}`}
         width="205"
         height="65"

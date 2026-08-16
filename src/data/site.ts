@@ -13,7 +13,7 @@ export const site = {
     title: "Nutricionista em Ivoti e Estância Velha | Gladis Feldmann",
     description: "Nutricionista em Ivoti e Estância Velha, com consultas presenciais e online. Cuidado individualizado para uma alimentação possível e consciente.",
     url: "https://gladisfeldmann.com.br",
-    ogImage: "/images/hero-gladis.webp",
+    ogImage: "/images/hero-gladis2.webp",
   },
   hero: {
     eyebrow: "Nutricionista em Ivoti e Estância Velha · Online",
