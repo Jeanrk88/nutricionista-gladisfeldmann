@@ -314,14 +314,14 @@ summary:focus-visible {
 }
 
 .hero .button {
-  background: var(--cream);
-  border-color: var(--cream);
-  color: var(--ink);
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  color: var(--white);
 }
 
 .hero .button:hover {
-  background: var(--white);
-  border-color: var(--white);
+  background: var(--sage-dark);
+  border-color: var(--sage-dark);
 }
 
 .hero .text-link {
@@ -1110,6 +1110,40 @@ summary:focus-visible {
   display: none;
 }
 
+.floating-whatsapp {
+  position: fixed;
+  z-index: 40;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 22px 0 12px;
+  background: #25d366;
+  color: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 12px 35px rgba(23, 31, 26, .3);
+  font-family: var(--display);
+  font-size: .86rem;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-2px);
+  background: #1ebe5b;
+}
+
+.floating-whatsapp img {
+  width: 34px;
+  height: 34px;
+  padding: 2px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 50%;
+}
+
 body.menu-open {
   overflow: hidden;
 }
@@ -1508,6 +1542,10 @@ body.menu-open {
     font-family: var(--display);
     font-size: .86rem;
     font-weight: 700;
+  }
+
+  .floating-whatsapp {
+    display: none;
   }
 
   .site-footer {
