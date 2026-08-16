@@ -22,7 +22,7 @@ const jsonLd = {
       name: `${site.role} ${site.name}`,
       jobTitle: site.role,
       url: site.seo.url,
-      image: `${site.seo.url}/images/hero-gladis2.webp`,
+      image: `${site.seo.url}/images/nutricionista-ivoti-hero-gladis.webp`,
       telephone: `+${site.phoneLink}`,
       sameAs: [site.googleProfile],
       areaServed: ["Ivoti", "Estância Velha", "Atendimento online"],
@@ -42,7 +42,7 @@ const jsonLd = {
       "@type": "MedicalBusiness",
       "@id": `${site.seo.url}/#medicalbusiness`,
       name: `${site.role} ${site.name}`,
-      image: `${site.seo.url}/images/hero-gladis2.webp`,
+      image: `${site.seo.url}/images/nutricionista-ivoti-hero-gladis.webp`,
       telephone: `+${site.phoneLink}`,
       priceRange: "$$",
       medicalSpecialty: "Nutrition",
@@ -153,7 +153,10 @@ const jsonLd = {
     <section class="hero" id="inicio">
       <div class="hero-visual">
         <picture class="hero-bg">
-          <source media="(max-width: 760px)" srcset={asset(site.assets.heroMobile)} />
+          <source
+            media="(max-width: 760px)"
+            srcset={asset(site.assets.heroMobile)}
+          />
           <img
             src={asset(site.assets.hero)}
             alt="Nutricionista Gladis Feldmann em consultório, atendimento em Ivoti e Estância Velha"
@@ -171,7 +174,10 @@ const jsonLd = {
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-copy">
         <p class="eyebrow">{site.hero.eyebrow}</p>
-        <h1>{site.hero.title}</h1>
+        <h1>
+          {site.hero.title.replace(site.hero.titleHighlight, "")}<span
+            class="highlight">{site.hero.titleHighlight}</span>
+        </h1>
         <p class="hero-tagline">{site.hero.tagline}</p>
         <p class="lead">{site.hero.description}</p>
         <div class="hero-actions">
@@ -203,7 +209,9 @@ const jsonLd = {
         <div class="section-heading">
           <div>
             <p class="eyebrow eyebrow-light">Posso ajudar você</p><h2>
-              Cuidado nutricional para diferentes momentos da vida.
+              Cuidado nutricional para <span class="highlight"
+                >diferentes momentos da vida</span
+              >
             </h2>
           </div><p>
             Cada acompanhamento começa pela sua história e respeita o
@@ -240,10 +248,19 @@ const jsonLd = {
     </section>
 
     <section class="section process-section" id="metodo">
+      <img
+        class="process-bg"
+        src={asset(site.assets.processBg)}
+        alt=""
+        aria-hidden="true"
+        width="1754"
+        height="897"
+        loading="lazy"
+      />
       <div class="container process-grid">
         <div class="process-intro">
           <p class="eyebrow">Abordagem integrada</p><h2>
-            Três pilares para cuidar de você por inteiro.
+            Três pilares <span class="highlight">para cuidar</span> de você por inteiro
           </h2><p>
             A alimentação não acontece isolada da vida. Por isso, o
             acompanhamento considera o que você come, como organiza seus hábitos
@@ -281,7 +298,7 @@ const jsonLd = {
         <div class="testimonial-heading">
           <div>
             <p class="eyebrow">Transformando vidas</p><h2>
-              Experiências de quem já começou.
+              Experiências de <span class="highlight">quem já começou</span>
             </h2>
           </div>
           <div>
@@ -339,7 +356,10 @@ const jsonLd = {
           </div>
         </div>
         <div class="about-copy">
-          <p class="eyebrow">{site.about.eyebrow}</p><h2>{site.about.title}</h2>
+          <p class="eyebrow">{site.about.eyebrow}</p><h2>
+            {site.about.title.replace(site.about.titleHighlight, "")}<span
+              class="highlight">{site.about.titleHighlight}</span>
+          </h2>
           {site.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           <p class="about-credentials">{site.credentials}</p>
           <div class="about-values">
@@ -367,7 +387,9 @@ const jsonLd = {
       <div class="container">
         <div class="locations-heading">
           <p class="eyebrow">Onde você pode me encontrar</p><h2>
-            Presencial ou online, com a mesma atenção.
+            Presencial ou online, com <span class="highlight"
+              >a mesma atenção</span
+            >
           </h2>
         </div>
         <div class="locations-grid">
@@ -435,16 +457,18 @@ const jsonLd = {
       <div class="container contact-card">
         <div>
           <p class="eyebrow eyebrow-light">Agende sua consulta</p><h2>
-            Sua transformação pode começar por uma conversa.
+            Sua transformação pode começar por <span class="highlight"
+              >uma conversa</span
+            >
           </h2>
         </div><div class="contact-details">
           <p><span>Modalidades</span><strong>Presencial e online</strong></p><p>
             <span>WhatsApp</span><strong>{site.phoneDisplay}</strong>
           </p><p>
-            <span>Telefone</span
-            ><strong><a class="contact-tel" href={site.telLink}
-              >{site.phoneDisplay}</a
-            ></strong>
+            <span>Telefone</span><strong
+              ><a class="contact-tel" href={site.telLink}>{site.phoneDisplay}</a
+              ></strong
+            >
           </p><a
             class="button button-light"
             href={whatsappUrl}
@@ -460,7 +484,9 @@ const jsonLd = {
       <div class="container map-grid">
         <div class="map-copy">
           <p class="eyebrow">Como chegar</p>
-          <h2>Encontre o consultório para sua consulta.</h2>
+          <h2>
+            Encontre o <span class="highlight">consultório</span> para sua consulta
+          </h2>
           <p>
             Os atendimentos presenciais acontecem em dois endereços no Vale do
             Sinos, com a mesma atenção e cuidado em ambos.
@@ -490,8 +516,7 @@ const jsonLd = {
             title="Mapa do consultório da nutricionista Gladis Feldmann em Ivoti"
             loading="lazy"
             allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -508,13 +533,15 @@ const jsonLd = {
         Atendimento nutricional presencial em Ivoti e Estância Velha, RS, e
         consultas online.
       </p><div class="footer-links">
-        <a href={site.telLink}>Ligar: {site.phoneDisplay}</a
-        ><a href="#inicio">Voltar ao início ↑</a>
+        <a href={site.telLink}>Ligar: {site.phoneDisplay}</a><a href="#inicio"
+          >Voltar ao início ↑</a
+        >
       </div>
     </div>
     <div class="container footer-bottom">
       <span
-        >© {new Date().getFullYear()} {site.name} · {site.role} · CRN
+        >© {new Date().getFullYear()}
+        {site.name} · {site.role} · CRN
         {site.crn}</span
       ><span>Desenvolvido por Studio Tchê</span>
     </div>
@@ -534,13 +561,7 @@ const jsonLd = {
     rel="noreferrer"
     aria-label="Olá, Nutri Gladis! Quero mais informações sobre as consultas."
   >
-    <img
-      src={asset("/images/whatsapp.webp")}
-      alt=""
-      width="34"
-      height="34"
-    />
-    <span>Falar no WhatsApp</span>
+    <img src={asset("/images/whatsapp.webp")} alt="" width="34" height="34" />
   </a>
 </BaseLayout>
 

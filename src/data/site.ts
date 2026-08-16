@@ -10,23 +10,25 @@ export const site = {
   phoneLink: "5551998158026",
   telLink: "tel:+5551998158026", // Confirmar com a profissional antes da publicação definitiva.
   googleProfile: "https://www.google.com/maps/place/Nutricionista+Gladis+Feldmann/@-29.5959033,-51.1669028,17z/data=!3m1!4b1!4m6!3m5!1s0x951945b100e089a7:0x9377bba161bdae32!8m2!3d-29.5959081!4d-51.1620319!16s%2Fg%2F11rzg3z69l",
-  mapsEmbedUrl: "https://maps.google.com/maps?q=Nutricionista%20Gladis%20Feldmann&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  mapsEmbedUrl: "https://maps.google.com/maps?q=-29.5959081,-51.1620319&z=17&hl=pt-BR&output=embed",
   mapsUrl: "https://www.google.com/maps/place/Nutricionista+Gladis+Feldmann/@-29.5959081,-51.1620319,17z",
   seo: {
     title: "Nutricionista em Ivoti e Estância Velha | Gladis Feldmann",
     description: "Nutricionista em Ivoti e Estância Velha, com consultas presenciais e online. Cuidado individualizado para uma alimentação possível e consciente.",
     url: "https://gladisfeldmann.com.br",
-    ogImage: "/images/hero-gladis2.webp",
+    ogImage: "/images/nutricionista-ivoti-hero-gladis.webp",
   },
   hero: {
     eyebrow: "Atendimento presencial e online",
     title: "Nutricionista em Ivoti e Estância Velha, Gladis Feldmann",
+    titleHighlight: "Gladis Feldmann",
     tagline: "Sua transformação começa com escolhas que cabem na sua vida.",
     description: "Mais saúde, qualidade de vida e autoestima por meio de uma alimentação simples, consciente e possível, sem dietas impossíveis.",
   },
   about: {
     eyebrow: "Olá, eu sou a Gladis!",
-    title: "Nutrição para transformar sua relação com a comida.",
+    title: "Nutrição para transformar sua relação com a comida",
+    titleHighlight: "sua relação com a comida",
     paragraphs: [
       "Minha paixão pela nutrição nasceu da minha própria jornada em busca de equilíbrio. Aprendi que a alimentação vai muito além da fome: ela também envolve emoções, cultura, rotina e história de vida.",
       "Acredito em uma alimentação livre, consciente, segura e prazerosa. Por isso, não trabalho com dietas restritivas ou com a ideia de simplesmente “fechar a boca”.",
@@ -35,9 +37,10 @@ export const site = {
   },
   assets: {
     logo: "/images/logo-gladisfeldmann.svg",
-    hero: "/images/hero-gladis2.webp",
-    heroMobile: "/images/hero-gladis-mobile.webp",
-    about: "/images/sobre-gladis.webp",
+    hero: "/images/nutricionista-ivoti-hero-gladis.webp",
+    heroMobile: "/images/nutricionista-ivoti-gladis-hero-gladis-mobile.webp",
+    about: "/images/nutricionista-ivoti-sobre-gladis.webp",
+    processBg: "/images/nutricionista-ivoti-gladis.webp",
   },
 } as const;
 
