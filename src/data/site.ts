@@ -20,9 +20,9 @@ export const site = {
   },
   hero: {
     eyebrow: "Atendimento presencial e online",
-    title: "Nutricionista em Ivoti e Estância Velha — Gladis Feldmann",
+    title: "Nutricionista em Ivoti e Estância Velha, Gladis Feldmann",
     tagline: "Sua transformação começa com escolhas que cabem na sua vida.",
-    description: "Mais saúde, qualidade de vida e autoestima por meio de uma alimentação simples, consciente e possível — sem dietas impossíveis.",
+    description: "Mais saúde, qualidade de vida e autoestima por meio de uma alimentação simples, consciente e possível, sem dietas impossíveis.",
   },
   about: {
     eyebrow: "Olá, eu sou a Gladis!",
@@ -30,7 +30,7 @@ export const site = {
     paragraphs: [
       "Minha paixão pela nutrição nasceu da minha própria jornada em busca de equilíbrio. Aprendi que a alimentação vai muito além da fome: ela também envolve emoções, cultura, rotina e história de vida.",
       "Acredito em uma alimentação livre, consciente, segura e prazerosa. Por isso, não trabalho com dietas restritivas ou com a ideia de simplesmente “fechar a boca”.",
-      "Em cada acompanhamento, procuro compreender suas particularidades para construir estratégias realistas — seja para cuidar da saúde, melhorar a qualidade de vida ou buscar um emagrecimento saudável.",
+      "Em cada acompanhamento, procuro compreender suas particularidades para construir estratégias realistas, seja para cuidar da saúde, melhorar a qualidade de vida ou buscar um emagrecimento saudável.",
     ],
   },
   assets: {
@@ -46,71 +46,43 @@ export const specialties = [
     number: "01",
     title: "Emagrecimento saudável",
     text: "Uma abordagem individualizada para conciliar preferências, rotina e objetivos, construindo mudanças graduais sem dietas restritivas.",
-    details: [
-      "O foco não é só a balança: é construir hábitos que você consegue manter — escolhas que cabem na sua rotina, no seu orçamento e no seu paladar.",
-      "Quem procura: pessoas que já tentaram dietas restritivas, que emagrecem e recuperam o peso, e que buscam um processo sem sofrimento e sem culpa.",
-      "Como funciona: o acompanhamento começa por uma avaliação completa — histórico, rotina e objetivos — e evolui em etapas graduais, com metas realistas e reavaliações periódicas.",
-    ],
+    detail: "O foco não é só a balança: são hábitos que cabem na sua vida. Para quem já tentou dietas restritivas e busca um processo sem culpa, o acompanhamento começa com uma avaliação completa e evolui em etapas graduais, com metas realistas.",
   },
   {
     number: "02",
     title: "Doenças crônicas",
     text: "Acompanhamento nutricional para diabetes, hipertensão, alterações de colesterol, triglicerídeos e tireoide, integrado ao cuidado médico.",
-    details: [
-      "Diabetes, hipertensão, colesterol, triglicerídeos e tireoide pedem uma alimentação que dialoga com o tratamento médico — sem abrir mão do prazer de comer.",
-      "Quem procura: pessoas com diagnóstico ou exames alterados que precisam organizar a alimentação de forma segura e integrada ao acompanhamento médico.",
-      "Como funciona: o plano alimentar é construído com base nos exames e nas orientações do seu médico, com ajustes feitos em conjunto ao longo do tempo.",
-    ],
+    detail: "Uma alimentação que dialoga com o seu tratamento, sem abrir mão do prazer de comer. O plano é construído com base nos exames e nas orientações do seu médico, com ajustes feitos em conjunto ao longo do tempo.",
   },
   {
     number: "03",
     title: "Autoimunes e intolerâncias",
     text: "Adequações alimentares personalizadas para apoiar o manejo de sintomas e as necessidades nutricionais, sempre respeitando o diagnóstico e o tratamento.",
-    details: [
-      "Condições como Hashimoto, doenças inflamatórias e intolerâncias alimentares pedem adequações personalizadas — nunca generalizações.",
-      "Quem procura: pessoas com diagnóstico confirmado ou suspeita, que querem entender o papel da alimentação no manejo dos sintomas.",
-      "Como funciona: respeitando o diagnóstico e o tratamento conduzidos pelo seu médico, o trabalho identifica alimentos e padrões que podem apoiar seu bem-estar.",
-    ],
+    detail: "Condições como Hashimoto, doenças inflamatórias e intolerâncias pedem ajustes individualizados, nunca generalizações. O trabalho identifica alimentos e padrões que podem apoiar seu bem-estar, respeitando o tratamento conduzido pelo seu médico.",
   },
   {
     number: "04",
     title: "Pré e pós-bariátrica",
     text: "Cuidado nutricional antes e depois da cirurgia para apoiar a adaptação alimentar, a ingestão de nutrientes e a manutenção dos resultados com segurança.",
-    details: [
-      "O preparo nutricional antes da cirurgia e o acompanhamento depois são decisivos para a adaptação alimentar e a manutenção dos resultados.",
-      "Quem procura: pessoas em preparo para cirurgia bariátrica ou já operadas, em qualquer fase do processo.",
-      "Como funciona: um plano faseado — preparo pré-operatório, reeducação pós-cirúrgica e manutenção — sempre em conjunto com a equipe médica.",
-    ],
+    detail: "O preparo pré-operatório e a reeducação pós-cirúrgica são decisivos para os resultados. Um plano faseado, sempre em conjunto com a equipe médica, acompanha cada etapa do processo.",
   },
   {
     number: "05",
     title: "Nutrição para gestantes",
     text: "Orientação nutricional em cada trimestre, alinhada ao acompanhamento pré-natal e às necessidades da mãe e do bebê.",
-    details: [
-      "Cada trimestre traz necessidades diferentes para a mãe e para o bebê, e a alimentação acompanha essa evolução.",
-      "Quem procura: gestantes que querem orientação nutricional segura, alinhada ao pré-natal.",
-      "Como funciona: orientações específicas por trimestre, incluindo ganho de peso adequado, nutrientes essenciais e manejo de desconfortos comuns.",
-    ],
+    detail: "Cada trimestre pede ajustes diferentes, do ganho de peso adequado aos nutrientes essenciais, incluindo o manejo de desconfortos comuns da gestação.",
   },
   {
     number: "06",
     title: "Saúde intestinal",
     text: "Planejamento alimentar para síndrome do intestino irritável, doença de Crohn, retocolite e constipação, como parte do cuidado multiprofissional.",
-    details: [
-      "Síndrome do intestino irritável, Crohn, retocolite e constipação têm forte relação com a alimentação — e cada caso pede uma abordagem individual.",
-      "Quem procura: pessoas com diagnóstico ou sintomas intestinais que afetam a rotina e buscam alívio com acompanhamento especializado.",
-      "Como funciona: o trabalho identifica gatilhos alimentares e constrói um plano gradual, como parte do cuidado multiprofissional.",
-    ],
+    detail: "Cada caso pede uma abordagem individual: o trabalho identifica gatilhos alimentares e constrói um plano gradual para aliviar sintomas que afetam a rotina.",
   },
   {
     number: "07",
     title: "Comportamento alimentar",
     text: "Suporte nutricional para compulsão e transtornos alimentares, com escuta sem julgamentos e atuação em conjunto com outros profissionais quando necessário.",
-    details: [
-      "Compulsão e uma relação difícil com a comida raramente se resolvem com dieta — exigem escuta, acolhimento e estratégias comportamentais.",
-      "Quem procura: pessoas que sentem perda de controle diante da comida, comem escondido ou vivem entre dieta e culpa.",
-      "Como funciona: um espaço sem julgamentos, com estratégias práticas e atuação em conjunto com psicólogos e outros profissionais quando necessário.",
-    ],
+    detail: "Compulsão e uma relação difícil com a comida não se resolvem com dieta. Um espaço acolhedor, com estratégias práticas e atuação em conjunto com psicólogos e outros profissionais quando necessário.",
   },
 ] as const;
 
@@ -148,7 +120,7 @@ export const faqs = [
   // Confirmar com a profissional antes da publicação definitiva.
   ["Como funciona a consulta online?", "A consulta online acontece por videochamada, com a mesma atenção e privacidade do atendimento presencial. Você recebe as orientações e o plano alimentar por WhatsApp ou e-mail."],
   // Confirmar com a profissional antes da publicação definitiva.
-  ["Preciso levar exames na primeira consulta?", "Não é obrigatório. Se você tiver exames recentes, traga-os — eles ajudam a avaliar seu quadro. Se não tiver, o atendimento acontece normalmente."],
+  ["Preciso levar exames na primeira consulta?", "Não é obrigatório. Se você tiver exames recentes, traga-os, eles ajudam a avaliar seu quadro. Se não tiver, o atendimento acontece normalmente."],
   // Confirmar com a profissional antes da publicação definitiva.
   ["Como funciona o primeiro atendimento?", "O primeiro atendimento é uma conversa completa: história de saúde, rotina, preferências e objetivos. A partir dela, é construído um plano realista, em etapas."],
 ] as const;
