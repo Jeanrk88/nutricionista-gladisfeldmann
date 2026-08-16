@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+import { site } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.seo.title, description = site.seo.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.seo.url);
+const preview = import.meta.env.PUBLIC_SITE_PREVIEW === "true";
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/png" href="/favicon-gladis.png" />
+    <link rel="apple-touch-icon" href="/favicon-gladis.png" />
+    <meta name="theme-color" content="#344126" />
+    <meta name="robots" content={preview ? "noindex,nofollow" : "index,follow"} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(site.seo.ogImage, site.seo.url)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
