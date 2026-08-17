@@ -243,8 +243,7 @@ summary:focus-visible {
 }
 
 .button span,
-.text-link span,
-.mobile-whatsapp span {
+.text-link span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1152,10 +1151,6 @@ summary:focus-visible {
   font-size: .75rem;
 }
 
-.mobile-whatsapp {
-  display: none;
-}
-
 .floating-whatsapp {
   position: fixed;
   z-index: 40;
@@ -1562,41 +1557,6 @@ body.menu-open {
   .footer-bottom {
     flex-direction: column;
     gap: 8px;
-  }
-
-  .mobile-whatsapp {
-    position: fixed;
-    z-index: 25;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
-    min-height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 12px;
-    background: var(--sage-dark);
-    color: var(--white);
-    box-shadow: 0 12px 35px rgba(23, 31, 26, .28);
-    border-radius: 3px;
-    font-family: var(--display);
-    font-size: .86rem;
-    font-weight: 600;
-    opacity: 0;
-    transform: translateY(16px);
-    pointer-events: none;
-    transition: opacity .3s ease, transform .3s ease;
-  }
-
-  .mobile-whatsapp.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .floating-whatsapp {
-    display: none;
   }
 
   .site-footer {
