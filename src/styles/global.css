@@ -21,6 +21,7 @@
   --paper: #fffdf8;
   --sage: #5b6b42;
   --sage-dark: #344126;
+  --sage-tint: #c8d0b2;
   --terracotta: #c96f4a;
   --terracotta-deep: #a8542e;
   --line: rgba(38, 49, 43, 0.15);
@@ -336,6 +337,10 @@ summary:focus-visible {
 
 .highlight {
   color: var(--terracotta);
+}
+
+.contact-card h2 .highlight {
+  color: var(--sage-dark);
 }
 
 .hero .lead {
