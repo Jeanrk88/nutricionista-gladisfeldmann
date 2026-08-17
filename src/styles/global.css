@@ -1151,6 +1151,16 @@ summary:focus-visible {
   font-size: .75rem;
 }
 
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer-credit img {
+  border-radius: 3px;
+}
+
 .floating-whatsapp {
   position: fixed;
   z-index: 40;
