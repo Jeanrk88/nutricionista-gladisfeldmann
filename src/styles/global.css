@@ -541,8 +541,10 @@ summary:focus-visible {
   height: 154px;
   display: grid;
   place-content: center;
+  gap: 4px;
+  padding: 18px;
   text-align: center;
-  background: var(--terracotta);
+  background: var(--terracotta-deep);
   color: var(--white);
   border-radius: 50%;
   box-shadow: 0 12px 35px rgba(80, 43, 29, .2);
