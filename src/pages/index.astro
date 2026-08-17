@@ -80,13 +80,32 @@ const jsonLd = {
 ---
 
 <BaseLayout>
-  <Fragment slot="head"
-    ><script
+  <Fragment slot="head">
+    <link
+      rel="preload"
+      as="image"
+      href={asset(site.assets.hero)}
+      media="(min-width: 761px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href={asset(site.assets.heroMobile)}
+      media="(max-width: 760px)"
+    />
+    <link rel="preload" as="image" href={asset(site.assets.logo)} />
+    <link
+      rel="preload"
+      as="image"
+      href={asset("/images/whatsapp.webp")}
+    />
+    <script
       is:inline
       type="application/ld+json"
       set:html={JSON.stringify(jsonLd)}
-    /></Fragment
-  >
+    />
+  </Fragment>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header">
     <div class="container header-inner">
@@ -543,7 +562,7 @@ const jsonLd = {
         >© {new Date().getFullYear()}
         {site.name} · {site.role} · CRN
         {site.crn}</span
-      ><span>Desenvolvido por Studio Tchê</span>
+      ><span>Desenvolvido por <a href="https://jeankist.com" target="_blank" rel="noreferrer">Jean Kist</a></span>
     </div>
   </footer>
   <a
