@@ -623,8 +623,13 @@ const jsonLd = {
 
   if (whatsappBar && services) {
     const observer = new IntersectionObserver(
-      ([entry]) => whatsappBar.classList.toggle("show", entry.isIntersecting),
-      { threshold: 0.2 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          whatsappBar.classList.add("show");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
     observer.observe(services);
   }
