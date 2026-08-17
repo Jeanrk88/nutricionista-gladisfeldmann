@@ -4,9 +4,6 @@
   font-weight: 400 600;
   font-display: optional;
   src: url("/fonts/dm-sans.woff2") format("woff2");
-  ascent-override: 109.58%;
-  descent-override: 146.28%;
-  line-gap-override: 0%;
 }
 
 @font-face {
@@ -15,9 +12,6 @@
   font-weight: 400;
   font-display: optional;
   src: url("/fonts/newsreader.woff2") format("woff2");
-  ascent-override: 80.15%;
-  descent-override: 120.87%;
-  line-gap-override: 0%;
 }
 
 :root {
@@ -27,13 +21,12 @@
   --paper: #fffdf8;
   --sage: #5b6b42;
   --sage-dark: #344126;
-  --sage-soft: #dfe5d1;
   --terracotta: #c96f4a;
   --line: rgba(38, 49, 43, 0.15);
   --white: #ffffff;
   --serif: "Newsreader", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
-  --display: "DM Sans", Arial, sans-serif;
+  --display: var(--sans);
   --shadow: 0 24px 70px rgba(38, 49, 43, 0.13);
 }
 
@@ -43,7 +36,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -296,10 +289,6 @@ summary:focus-visible {
   z-index: 2;
 }
 
-.hero-copy .eyebrow {
-  color: #d7bd9f;
-}
-
 .eyebrow {
   margin: 0 0 18px;
   color: var(--sage);
@@ -307,6 +296,18 @@ summary:focus-visible {
   font-size: .74rem;
   font-weight: 600;
   letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.eyebrow-light {
+  color: #d7bd9f;
+}
+
+.kicker {
+  font-family: var(--display);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .14em;
   text-transform: uppercase;
 }
 
@@ -356,7 +357,6 @@ summary:focus-visible {
 .hero .button {
   background: var(--terracotta);
   border-color: var(--terracotta);
-  color: var(--white);
 }
 
 .hero .button:hover {
@@ -488,10 +488,6 @@ summary:focus-visible {
   color: var(--white);
 }
 
-.about-section .eyebrow {
-  color: #d7bd9f;
-}
-
 .about-section .text-link {
   color: var(--white);
   border-bottom-color: rgba(255, 255, 255, .5);
@@ -567,13 +563,13 @@ summary:focus-visible {
   margin-bottom: 30px;
 }
 
-.about-credentials {
+.about-copy .about-credentials {
   margin: 26px 0 0;
   padding: 14px 0;
   border-block: 1px solid rgba(255, 255, 255, .18);
-  color: rgba(255, 255, 255, .85) !important;
+  color: rgba(255, 255, 255, .85);
   font-family: var(--display);
-  font-size: .78rem !important;
+  font-size: .78rem;
   font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -614,10 +610,6 @@ summary:focus-visible {
   color: var(--sage);
 }
 
-.eyebrow-light {
-  color: #d7bd9f;
-}
-
 .section-heading {
   display: grid;
   grid-template-columns: 1.5fr .8fr;
@@ -642,7 +634,6 @@ summary:focus-visible {
   min-height: 390px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   justify-content: space-between;
   padding: 34px 35px 30px;
   border-right: 1px solid var(--line);
@@ -779,17 +770,6 @@ summary:focus-visible {
   margin-bottom: 56px;
 }
 
-.testimonial-heading h2,
-.locations-heading h2 {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(2.15rem, 3.4vw, 3.5rem);
-  font-weight: 400;
-  letter-spacing: -.035em;
-  line-height: 1.02;
-  text-wrap: balance;
-}
-
 .testimonial-heading>div:last-child>p {
   margin: 0 0 16px;
   color: var(--muted);
@@ -878,11 +858,6 @@ summary:focus-visible {
 
 .location-card>span {
   color: var(--terracotta);
-  font-family: var(--display);
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
 }
 
 .location-card h3 {
@@ -897,10 +872,6 @@ summary:focus-visible {
   display: flex;
   flex-direction: column;
   margin: 0;
-}
-
-.location-card strong {
-  font-weight: 600;
 }
 
 .location-card small {
@@ -1075,11 +1046,6 @@ summary:focus-visible {
 
 .map-addresses span {
   color: var(--terracotta);
-  font-family: var(--display);
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
 }
 
 .map-addresses strong {
@@ -1267,10 +1233,6 @@ body.menu-open {
 
 .menu-panel-head small {
   color: var(--sage);
-  font-size: .68rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
 }
 
 .mobile-nav {
@@ -1325,7 +1287,7 @@ body.menu-open {
   }
 
   .hero-copy {
-    width: min(78%, 720px);
+    width: min(1180px, calc(100% - 48px));
     padding: 70px 0 76px;
   }
 
@@ -1393,6 +1355,10 @@ body.menu-open {
 
   .header-inner {
     min-height: 72px;
+  }
+
+  html {
+    scroll-padding-top: 72px;
   }
 
   .brand img {
@@ -1595,6 +1561,16 @@ body.menu-open {
     font-family: var(--display);
     font-size: .86rem;
     font-weight: 600;
+    opacity: 0;
+    transform: translateY(16px);
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+  }
+
+  .mobile-whatsapp.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .floating-whatsapp {

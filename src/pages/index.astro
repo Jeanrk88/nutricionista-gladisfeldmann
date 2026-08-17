@@ -149,6 +149,7 @@ const jsonLd = {
       >
       <div class="menu-panel-head">
         <span class="menu-brand">Gladis Feldmann</span><small
+          class="kicker"
           >Nutricionista</small
         >
       </div>
@@ -192,7 +193,7 @@ const jsonLd = {
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container hero-copy">
-        <p class="eyebrow">{site.hero.eyebrow}</p>
+        <p class="eyebrow eyebrow-light">{site.hero.eyebrow}</p>
         <h1>
           {site.hero.title.replace(site.hero.titleHighlight, "")}<span
             class="highlight">{site.hero.titleHighlight}</span>
@@ -375,7 +376,7 @@ const jsonLd = {
           </div>
         </div>
         <div class="about-copy">
-          <p class="eyebrow">{site.about.eyebrow}</p><h2>
+          <p class="eyebrow eyebrow-light">{site.about.eyebrow}</p><h2>
             {site.about.title.replace(site.about.titleHighlight, "")}<span
               class="highlight">{site.about.titleHighlight}</span>
           </h2>
@@ -416,7 +417,7 @@ const jsonLd = {
             locations.map((location) => (
               <article class="location-card">
                 <>
-                  <span>{location.type}</span>
+                  <span class="kicker">{location.type}</span>
                   <h3>{location.city}</h3>
                   <p>
                     <>
@@ -514,7 +515,7 @@ const jsonLd = {
             {
               locations.slice(0, 2).map((location) => (
                 <li>
-                  <span>{location.city}</span>
+                  <span class="kicker">{location.city}</span>
                   <strong>{location.address}</strong>
                   <small>{location.district}</small>
                 </li>
@@ -615,5 +616,16 @@ const jsonLd = {
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && menu.classList.contains("open")) close();
     });
+  }
+
+  const whatsappBar = document.querySelector(".mobile-whatsapp");
+  const services = document.getElementById("atendimentos");
+
+  if (whatsappBar && services) {
+    const observer = new IntersectionObserver(
+      ([entry]) => whatsappBar.classList.toggle("show", entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    observer.observe(services);
   }
 </script>
