@@ -3,7 +3,12 @@
   font-style: normal;
   font-weight: 400 600;
   font-display: optional;
-  src: url("/fonts/dm-sans.woff2") format("woff2");
+  src: url("/fonts/dm-sans.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/dm-sans.woff2") format("woff2"),
+    url("/fonts/dm-sans.woff") format("woff"),
+    url("/fonts/dm-sans.ttf") format("truetype"),
+    url("/fonts/dm-sans.otf") format("opentype"),
+    url("/fonts/dm-sans.svg#DMSans9pt-Regular") format("svg");
 }
 
 @font-face {
@@ -11,7 +16,12 @@
   font-style: normal;
   font-weight: 400;
   font-display: optional;
-  src: url("/fonts/newsreader.woff2") format("woff2");
+  src: url("/fonts/newsreader.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/newsreader.woff2") format("woff2"),
+    url("/fonts/newsreader.woff") format("woff"),
+    url("/fonts/newsreader.ttf") format("truetype"),
+    url("/fonts/newsreader.otf") format("opentype"),
+    url("/fonts/newsreader.svg#Newsreader16pt-Regular") format("svg");
 }
 
 :root {
@@ -425,8 +435,8 @@ summary:focus-visible {
 .floating-card {
   position: absolute;
   z-index: 2;
-  right: 24px;
-  bottom: 24px;
+  right: 204px;
+  bottom: 104px;
   min-width: 220px;
   background: var(--paper);
   box-shadow: 0 16px 45px rgba(38, 49, 43, .14);
