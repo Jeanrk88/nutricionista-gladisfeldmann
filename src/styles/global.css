@@ -2,16 +2,22 @@
   font-family: "DM Sans";
   font-style: normal;
   font-weight: 400 600;
-  font-display: swap;
+  font-display: optional;
   src: url("/fonts/dm-sans.woff2") format("woff2");
+  ascent-override: 109.58%;
+  descent-override: 146.28%;
+  line-gap-override: 0%;
 }
 
 @font-face {
   font-family: "Newsreader";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("/fonts/newsreader.woff2") format("woff2");
+  ascent-override: 80.15%;
+  descent-override: 120.87%;
+  line-gap-override: 0%;
 }
 
 :root {
@@ -1409,6 +1415,7 @@ body.menu-open {
     position: relative;
     width: 100%;
     height: auto;
+    aspect-ratio: 8 / 7;
     object-fit: contain;
     object-position: top center;
   }
