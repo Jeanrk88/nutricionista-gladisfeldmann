@@ -178,6 +178,7 @@ a {
   min-height: 54px;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 16px;
   border: 1px solid var(--sage-dark);
   background: var(--sage-dark);
@@ -224,6 +225,8 @@ summary:focus-visible {
   display: inline-flex;
   gap: 11px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   color: var(--sage-dark);
   border-bottom: 1px solid rgba(52, 65, 38, .4);
   padding-block: 6px;
@@ -232,6 +235,14 @@ summary:focus-visible {
 
 .text-link span {
   color: var(--terracotta);
+}
+
+.button span,
+.text-link span,
+.mobile-whatsapp span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .text-link-dark {
@@ -1575,6 +1586,7 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 12px;
     background: var(--sage-dark);
     color: var(--white);
