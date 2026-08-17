@@ -1102,7 +1102,7 @@ summary:focus-visible {
   padding: 58px 0 28px;
 }
 
-.site-footer img {
+.site-footer .logo img {
   width: 190px;
   filter: brightness(0) invert(1);
 }

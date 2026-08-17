@@ -95,11 +95,7 @@ const jsonLd = {
       media="(max-width: 760px)"
     />
     <link rel="preload" as="image" href={asset(site.assets.logo)} />
-    <link
-      rel="preload"
-      as="image"
-      href={asset("/images/whatsapp.webp")}
-    />
+    <link rel="preload" as="image" href={asset("/images/whatsapp.webp")} />
     <script
       is:inline
       type="application/ld+json"
@@ -148,8 +144,7 @@ const jsonLd = {
         aria-label="Fechar menu"><span aria-hidden="true">✕</span></button
       >
       <div class="menu-panel-head">
-        <span class="menu-brand">Gladis Feldmann</span><small
-          class="kicker"
+        <span class="menu-brand">Gladis Feldmann</span><small class="kicker"
           >Nutricionista</small
         >
       </div>
@@ -196,7 +191,8 @@ const jsonLd = {
         <p class="eyebrow eyebrow-light">{site.hero.eyebrow}</p>
         <h1>
           {site.hero.title.replace(site.hero.titleHighlight, "")}<span
-            class="highlight">{site.hero.titleHighlight}</span>
+            class="highlight">{site.hero.titleHighlight}</span
+          >
         </h1>
         <p class="hero-tagline">{site.hero.tagline}</p>
         <p class="lead">{site.hero.description}</p>
@@ -378,7 +374,8 @@ const jsonLd = {
         <div class="about-copy">
           <p class="eyebrow eyebrow-light">{site.about.eyebrow}</p><h2>
             {site.about.title.replace(site.about.titleHighlight, "")}<span
-              class="highlight">{site.about.titleHighlight}</span>
+              class="highlight">{site.about.titleHighlight}</span
+            >
           </h2>
           {site.about.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
           <p class="about-credentials">{site.credentials}</p>
@@ -543,7 +540,7 @@ const jsonLd = {
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-main">
+    <div class="container footer-main logo">
       <img
         src={asset(site.assets.logo)}
         alt={`${site.role} ${site.name}`}
