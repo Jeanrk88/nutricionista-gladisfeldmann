@@ -340,7 +340,7 @@ summary:focus-visible {
 }
 
 .contact-card h2 .highlight {
-  color: var(--sage-dark);
+  color: var(--sage-tint);
 }
 
 .hero .lead {
@@ -989,7 +989,7 @@ summary:focus-visible {
   margin: 0 0 23px;
 }
 
-.contact-details span {
+.contact-details p span {
   color: var(--cream);
   font-size: .7rem;
   letter-spacing: .12em;
