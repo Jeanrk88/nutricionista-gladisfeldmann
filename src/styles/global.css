@@ -22,6 +22,7 @@
   --sage: #5b6b42;
   --sage-dark: #344126;
   --terracotta: #c96f4a;
+  --terracotta-deep: #a8542e;
   --line: rgba(38, 49, 43, 0.15);
   --white: #ffffff;
   --serif: "Newsreader", Georgia, serif;
@@ -186,8 +187,8 @@ a {
 
 .button:hover {
   transform: translateY(-2px);
-  background: var(--terracotta);
-  border-color: var(--terracotta);
+  background: var(--terracotta-deep);
+  border-color: var(--terracotta-deep);
 }
 
 .button:focus-visible,
@@ -227,7 +228,7 @@ summary:focus-visible {
 }
 
 .text-link span {
-  color: var(--terracotta);
+  color: var(--terracotta-deep);
 }
 
 .button span,
@@ -303,6 +304,10 @@ summary:focus-visible {
   color: #d7bd9f;
 }
 
+.contact-card .eyebrow-light {
+  color: var(--cream);
+}
+
 .kicker {
   font-family: var(--display);
   font-size: .68rem;
@@ -355,8 +360,8 @@ summary:focus-visible {
 }
 
 .hero .button {
-  background: var(--terracotta);
-  border-color: var(--terracotta);
+  background: var(--terracotta-deep);
+  border-color: var(--terracotta-deep);
 }
 
 .hero .button:hover {
@@ -661,7 +666,7 @@ summary:focus-visible {
 }
 
 .service-number {
-  color: var(--terracotta);
+  color: var(--terracotta-deep);
   font-family: var(--serif);
   font-size: 1.35rem;
 }
@@ -857,7 +862,7 @@ summary:focus-visible {
 }
 
 .location-card>span {
-  color: var(--terracotta);
+  color: var(--terracotta-deep);
 }
 
 .location-card h3 {
@@ -937,7 +942,7 @@ summary:focus-visible {
 }
 
 .faq-list summary span {
-  color: var(--terracotta);
+  color: var(--terracotta-deep);
   font-size: 1.4rem;
   font-weight: 400;
   transition: transform .3s ease;
@@ -963,7 +968,7 @@ summary:focus-visible {
   grid-template-columns: 1.1fr .7fr;
   gap: 80px;
   align-items: center;
-  background: var(--terracotta);
+  background: var(--terracotta-deep);
   color: var(--white);
   padding: clamp(46px, 7vw, 86px);
 }
@@ -980,7 +985,7 @@ summary:focus-visible {
 }
 
 .contact-details span {
-  color: rgba(255, 255, 255, .72);
+  color: var(--cream);
   font-size: .7rem;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -1000,7 +1005,7 @@ summary:focus-visible {
 }
 
 .contact-details .contact-tel:hover {
-  color: #e8a487;
+  color: var(--cream);
 }
 
 .contact-details .button {
@@ -1045,7 +1050,7 @@ summary:focus-visible {
 }
 
 .map-addresses span {
-  color: var(--terracotta);
+  color: var(--terracotta-deep);
 }
 
 .map-addresses strong {
@@ -1254,7 +1259,7 @@ body.menu-open {
 
 .mobile-nav a::after {
   content: "→";
-  color: var(--terracotta);
+  color: var(--terracotta-deep);
   font-size: .95rem;
   transition: transform .3s ease;
 }
